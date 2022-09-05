@@ -1,0 +1,160 @@
+.container {
+    background-color: #f8f8fd;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.headerShapes {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.blackRectangle {
+    align-items: flex-end;
+    background: #272727;
+    border-bottom-left-radius: 20rem;
+    border-bottom-right-radius: 20rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+    width: 10rem;
+}
+
+.blackCircle {
+    background: #343434;
+    border-radius: 50%;
+    height: 3rem;
+    margin-bottom: 4;
+    position: relative;
+    width: 3rem;
+}
+
+.downloadIcon {
+    color: #dfdfdf;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.headerTitleContainer {
+    align-items: center;
+    display: flex;
+    direction: rtl;
+    flex: 1;
+    flex-direction: column;
+}
+
+.headerMenu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around
+}
+
+.description {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.descriptionTexts {
+    display: flex;
+    justify-content: space-around;
+    height: 50%;
+    flex-direction: column, ;
+    text-align: start;
+}
+
+.shapesContainer {
+    width: 250px;
+    height: 250px;
+    position: relative;
+}
+
+.arcWrapper {
+    margin: 20px;
+
+}
+
+@mixin arc {
+
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translateX(50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    border: 1px solid;
+    border: 25px solid;
+}
+
+
+.arcStart {
+    @include arc();
+    border-color: #ffbf5f transparent;
+    transform: rotate(290deg);
+}
+
+.arcEnd {
+    @include arc();
+
+    border-color: transparent #ffbf5f #ffbf5f #ffbf5f;
+
+    transform: rotate(45deg);
+}
+
+@mixin rectangle {
+    border-radius: 5px;
+    background-color: #05c6c5;
+    position: absolute;
+    height: 25px;
+    width: 50px;
+
+}
+
+.rectOne {
+    @include rectangle();
+    transform: rotate(-90deg);
+    top: 15%;
+    right: 62px;
+}
+
+.rectTwo {
+    @include rectangle();
+    top: 10%;
+    right: 75.5px;
+
+}
+
+.customButton {
+    background-color: #05c6c5;
+    border-radius: 20px;
+
+    &:hover {
+        background-color: #05c6c5;
+        filter: brightness(1.1)
+    }
+
+    & span {
+        margin: 0 2px;
+    }
+}
+
+.photo {
+    width:100%;
+    max-height: 370px;
+}
+
